@@ -1,0 +1,120 @@
+.services-section {
+  padding: 5rem 2rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background: var(--section-bg);
+  color: var(--text-color);
+}
+
+.services-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.services-header{
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.services-badge {
+  display: inline-block;
+  background: var(--badge-bg);
+  color: var(--badge-color);
+  padding: 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  border-radius: 40px;
+  margin-bottom: 1rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+}
+
+.services-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--accent);
+}
+
+.services-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-color);
+  line-height: 1.5;
+  letter-spacing: 2px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.service-card {
+  background: var(--card-bg);
+  border-radius: 28px;
+  padding: 2rem 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  background: var(--surface-bg);
+}
+
+.service-icon {
+  font-size: 3rem;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+.service-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--text-strong);
+}
+
+.service-description {
+  font-size: 1.1rem;
+  color: var(--text-color);
+  line-height: 1.6;
+  letter-spacing: 2px;
+  margin-bottom: 1.2rem;
+}
+
+.service-features {
+    list-style: none;
+    padding: 0;
+}
+
+.service-features > li {
+    color: var(--muted);
+    font-size: 0.9rem;
+    padding: 0.4rem 0;
+    align-items: center;
+    gap: 0.5rem;
+    display: flex;
+}
+
+.service-features li::before {
+    content: "✓";
+    font-weight: 900;
+    font-size: 1rem;
+    color: var(--accent);
+}
+
+.service-btn {
+    padding: 12px;
+    margin-top: 10px;
+    width: 150px;
+    background-color: var(--button-bg);
+    border: none;
+    color: var(--button-text);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.service-btn:hover {
+    background-color: rgba(255, 255, 255, 0.16);
+}

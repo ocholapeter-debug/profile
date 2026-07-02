@@ -5,6 +5,54 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  background: #05070f;
+  color: #f1f6ff;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.site-theme {
+  min-height: 100vh;
+  transition: background 0.3s ease, color 0.3s ease;
+  background: var(--page-bg);
+  color: var(--text-color);
+}
+
+.site-theme.theme-light {
+  --page-bg: #f4f7fb;
+  --text-color: #1c2430;
+  --section-bg: #ffffff;
+  --card-bg: #ffffff;
+  --surface-bg: #eff4ff;
+  --accent: #1971c2;
+  --muted: #495057;
+  --badge-bg: rgba(30, 111, 159, 0.1);
+  --badge-color: #1e6f9f;
+  --shadow: rgba(0, 0, 0, 0.12);
+  --button-bg: #1971c2;
+  --button-text: #ffffff;
+  --text-strong: #0f214f;
+}
+
+.site-theme.theme-dark {
+  --page-bg: radial-gradient(circle at top, rgba(84, 119, 255, 0.08), transparent 22%), #04070f;
+  --text-color: #f1f6ff;
+  --section-bg: rgba(255, 255, 255, 0.04);
+  --card-bg: rgba(255, 255, 255, 0.06);
+  --surface-bg: rgba(255, 255, 255, 0.08);
+  --accent: #82b1ff;
+  --muted: #b8c7e5;
+  --badge-bg: rgba(30, 111, 159, 0.18);
+  --badge-color: #8ab9ff;
+  --shadow: rgba(0, 0, 0, 0.28);
+  --button-bg: #5d7bff;
+  --button-text: #ffffff;
+  --text-strong: #ffffff;
+}
+
+.footer {
+  background: #031b44;
+  color: #edf4ff;
 }
 
 code {
