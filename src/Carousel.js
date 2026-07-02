@@ -5,10 +5,10 @@ const Carousel = ({ slides, autoPlayInterval = 5000 }) => {
   // Default slides using your images
   const defaultSlides = [
     {
-      image: 'https://plus.unsplash.com/premium_photo-1770382881955-1436023dd952?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGludGVybnNoaXAlMjBpbWFnZXN8ZW58MHx8MHx8fDA%3D',
+      image: './images/groupwork.jpg',
       caption: {
-        title: 'Global Internship Opportunities',
-        description: 'Connect with top companies worldwide'
+        title: 'Team Work',
+        description: 'Connects and carrys the top companies worldwide'
       }
     },
     {
@@ -19,7 +19,7 @@ const Carousel = ({ slides, autoPlayInterval = 5000 }) => {
       }
     },
     {
-      image: 'https://plus.unsplash.com/premium_photo-1682145181120-73cfdfc8a36d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW50ZXJuc2hpcCUyMGNvbXB1dGVyJTIwbmV0d29ya2luZyUyMGltYWdlc3xlbnwwfHwwfHx8MA%3D%3D',
+      image: './images/networking.jpeg ',
       caption: {
         title: 'Computer Networking',
         description: 'Master the backbone of IT infrastructure'

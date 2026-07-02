@@ -89,8 +89,9 @@
 }
 
 .about-image > img {
-  width: 100%;
-  border-radius: 28px;
+  width: 60%;
+  height: fit-content;
+  border-radius: 30px;
   transition: transform 0.3s ease;
   cursor: pointer;
   box-shadow: 0 30px 90px rgba(0, 0, 0, 0.15);

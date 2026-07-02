@@ -8,7 +8,7 @@ function Header({ theme, onToggleTheme }) {
       <div className="container header-container">
         <a className="logo-link" href="/">
           <img className="header-logo" src={logo} alt="Stratcom logo" />
-          <span className="header-logotext">Stratcom</span>
+          <span className="header-logotext">CholTech</span>
         </a>
 
         <nav className="navmenu">

@@ -5,24 +5,24 @@ function AboutUS() {
 
   const values = [
     { title: 'Innovation', desc: 'Pushing boundaries with cutting-edge solutions' },
-    { title: 'Excellence', desc: 'Delivering quality in every service we provide' },
+    { title: 'Excellence', desc: 'Delivering quality in every service i do' },
     { title: 'Integrity', desc: 'Building trust through transparency and honesty' },
     { title: 'Global Impact', desc: 'Empowering professionals worldwide' }
   ];
 
   const stats = [
-    { number: '5+', label: 'Years of Excellence' },
-    { number: '2k+', label: 'Students Trained' },
-    { number: '50+', label: 'Certified Instructors' },
-    { number: '98%', label: 'Success Rate' }
+    { number: '2+', label: 'Years of Excellence' },
+    { number: '6+', label: 'Students Trained' },
+    { number: '4+', label: 'Certified Instructors' },
+    { number: '80%', label: 'Success Rate' }
   ];
 
   return (
     <div className='about-section' >
          <div className='about-container'>
               <div className='about-header'>
-                   <span className='about-badge'>Our Story</span>
-                   <h2 className='about-title'>About StratCom</h2>
+                   <span className='about-badge'>My Story</span>
+                   <h2 className='about-title'>About CholTech</h2>
                    <p className='subtitle'>
                       Empowering the next generation of Tech Professionals in Uganda
                    </p>
@@ -31,22 +31,22 @@ function AboutUS() {
                   <div className='abouttext'>
                     <h3>Who We Are </h3>
                     <p>
-                      Founded in 2018, <strong>StratCom</strong> has grown into a premier training and certification hub for 
+                      Founded in 2022, <strong>CholTech</strong> has grown into a premier training and certification hub for 
                       aspiring IT professionals. We bridge the gap between theoretical knowledge and real-world application, 
                       offering hands-on bootcamps, networking courses, hardware repair training, and industry-recognized 
                       Cisco certifications.
                     </p>
                   <p>
-                    Our mission is simple: to equip learners with the skills they need to thrive in a digital-first economy. 
+                    My mission is simple: to a with the skills they need to thrive in a digital-first economy. 
                       Whether you're starting from scratch or advancing your career, StratCom provides the roadmap to success.
                   </p>
                   <div className='mission-vision'>
                     <div className='mission'>
-                        <h4>Our Mission</h4>
-                        <p>Democratise Tech education and create more employment Opportunities for Youth in Uganda</p>
+                        <h4>My Mission</h4>
+                        <p>Develop today by today and create more employment Opportunities for Youth in Uganda</p>
                     </div>
                     <div className='vision'>
-                      <h4>Our Vision</h4>
+                      <h4>My Vision</h4>
                       <p>To be Africas Leading Tech Institution recognized for excellence and Innovation</p>
                     </div>
                   </div>
