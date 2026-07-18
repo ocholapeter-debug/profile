@@ -1,16 +1,13 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 import Header from './Header';
-import Footer from './Footer';
-//import Carousel from './Carousel';
 import AboutUS from './AboutUS';
 import Services from './Services';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './Home';
 import Login from './Login';
-
-
-
+import Signup from './Signup';
+import Dashboard from './Dashboard';
 
 function App() {
   const [theme, setTheme] = useState('dark');
@@ -27,6 +24,8 @@ function App() {
       <div className={`site-theme ${theme === 'dark' ? 'theme-dark' : 'theme-light'}`}>
         <Router>
           <Routes>
+            
+            <Route path="/dashboard" element={<Dashboard />} />
             <Route
               path="/*"
               element={
@@ -36,37 +35,18 @@ function App() {
                     <Route path="/" element={<Home />} />
                     <Route path="/aboutus" element={<AboutUS />} />
                     <Route path="/services" element={<Services />} />
+                    
                   </Routes>
-                  <Route path="/login" element={<Login/>}/>
-                  <Route path="/signup" element={<Signup/>}/>
                 </>
-                
               }
             />
+            <Route path="/login" element={<Login/>}/>
+            <Route path="/signup" element={<Signup/>}/>
           </Routes>
         </Router>
       </div>
 
-      <Footer />
-
-     {/* <Footer/> */}               {/*
-      <Router>
-         <Routes>
-            <Route  path='/' element={<>
-            <Header/>
-            <Routes>
-            <Route  path='/ ' element={<Home/>}/>
-            <Route path='/aboutus' element={<AboutUS/>}/>
-            <Route path='/services' element={<Services/>}/>
-          </Routes>
-            </> }/>
-              <Route path='/login' element={<Login/>}/>
-            <Route path='/siginup'  element={<Signup/>}/>
-         </Routes>
-      </Router>
-                     */}
-
-
+      
     </div>
   );
 }

@@ -1,0 +1,278 @@
+/* --- CSS VARIABLES & THEME ENGINE --- */
+:root {
+  --bg-primary: #0f172a;
+  --bg-card: #1e293b;
+  --border-color: #334155;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  
+  /* Feature Colors */
+  --purple: #a855f7;
+  --purple-hover: #9333ea;
+  --emerald: #10b981;
+  --emerald-dark: #047857;
+  --blue: #3b82f6;
+  --amber: #f59e0b;
+}
+
+/* --- BASE STYLES --- */
+.dashboard-wrapper {
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.dashboard-header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(to right, #f8fafc, #94a3b8);
+  -webkit-background-clip: text;
+  background-clip: text; /* Improves browser compatibility for gradient text */
+  -webkit-text-fill-color: transparent;
+}
+
+.dashboard-header p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+/* --- DYNAMIC GRID LAYOUT --- */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* --- CARD ARCHITECTURE --- */
+.dashboard-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+/* Feature Borders */
+.border-purple { border-top: 4px solid var(--purple); }
+.border-emerald { border-top: 4px solid var(--emerald); }
+.border-blue { border-top: 4px solid var(--blue); }
+.border-amber { border-top: 4px solid var(--amber); }
+
+/* Typography & Icons */
+.card-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0 0 0.75rem 0;
+}
+
+.card-title svg {
+  width: 24px;
+  height: 24px;
+}
+
+.icon-purple { color: var(--purple); }
+.icon-emerald { color: var(--emerald); }
+.icon-blue { color: var(--blue); }
+.icon-amber { color: var(--amber); }
+
+.card-desc {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+/* --- INTERACTIVE INPUTS & BUTTONS --- */
+.custom-file-input {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: var(--bg-primary);
+  border: 1px dashed var(--border-color);
+  border-radius: 0.5rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+}
+
+.custom-file-input::-webkit-file-upload-button {
+  background-color: var(--border-color);
+  color: var(--text-main);
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  margin-right: 0.75rem;
+  font-weight: 600;
+}
+
+.execution-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 0.5rem;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 1rem;
+}
+
+.bg-purple { background-color: var(--purple); }
+.bg-purple:hover { background-color: var(--purple-hover); }
+
+.bg-emerald { background-color: var(--emerald); }
+.bg-emerald:hover { background-color: var(--emerald-dark); }
+.bg-emerald-dark { background-color: var(--emerald-dark); }
+
+/* --- OUTPUT BOXES & FEEDBACK ENGINE --- */
+.inner-output-box {
+  background-color: var(--bg-primary);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-top: 1rem;
+  border: 1px solid var(--border-color);
+}
+
+.box-subheading {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.05em;
+}
+
+/* Vector Preview Sandbox */
+.vector-preview {
+  width: 100%;
+  max-height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  overflow: hidden;
+}
+
+.vector-preview svg {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* File / Data Outputs */
+.file-preview-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 120px;
+  overflow-y: auto;
+}
+
+.file-preview-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-main);
+  padding: 0.25rem 0;
+}
+
+.json-render-block {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.8rem;
+  color: #38bdf8;
+  overflow-x: auto;
+  margin: 0;
+  white-space: pre-wrap; /* Keeps line breaks and spacing visible in JSON output */
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.transcription-output-text {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--text-main);
+  margin: 0;
+}
+
+/* --- STATE SYSTEM INDICATORS --- */
+.status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+}
+
+.status-indicator.processing {
+  background-color: rgba(59, 130, 246, 0.1);
+  color: #60a5fa;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.status-indicator.success-alert {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.log-text {
+  font-size: 0.8rem;
+  animation: pulse 1.5s infinite;
+}
+
+/* --- ANIMATION ACTIONS --- */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.spin-animation {
+  animation: spin 1s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+/* --- RESPONSIVE ADJUSTMENTS --- */
+@media (max-width: 640px) {
+  .dashboard-wrapper { padding: 1rem; }
+  .dashboard-header h1 { font-size: 2rem; }
+  .dashboard-grid { grid-template-columns: 1fr; }
+}

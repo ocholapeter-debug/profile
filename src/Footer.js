@@ -52,7 +52,7 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div className="footer-bottom">© {new Date().getFullYear()} Stratcom. All rights reserved.</div>
+      <div className="footer-bottom">© {new Date().getFullYear()} Choltech. All rights reserved.</div>
     </footer>
   );
 }

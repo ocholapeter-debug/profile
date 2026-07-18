@@ -28,6 +28,16 @@ function Header({ theme, onToggleTheme }) {
                 Services
               </a>
             </li>
+            <li className="navitem">
+              <a className="navlink" href="/Login">
+                Login
+              </a>
+            </li>
+            <li className="navitem">
+              <a className="navlink" href="/Signup">
+                Signup
+              </a>
+            </li>
           </ul>
         </nav>
 

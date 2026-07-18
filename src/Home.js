@@ -2,6 +2,7 @@ import React from 'react'
 import AboutUS from './AboutUS'
 import Services from './Services'
 import Carousel from './Carousel'  
+import Footer from './Footer'
 
 
 function Home() {
@@ -10,6 +11,7 @@ function Home() {
       <Carousel/>
       <AboutUS/>
       <Services/>
+      <Footer/>
     </div>
   )
 }
