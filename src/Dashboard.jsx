@@ -3,9 +3,10 @@ import ImageTracer from 'imagetracerjs'; // npm install imagetracerjs
 import JSZip from 'jszip'; // npm install jzip
 import * as XLSX from 'xlsx'; // npm install xlsx
 import { pipeline } from '@xenova/transformers'; // npm install @xenova/transformers
-import { PencilRuler, Archive, TableProperties, Mic, Download, Loader2, File, Code, FileText, CheckCircle2 } from 'lucide-react';
+import { PencilRuler, Archive, TableProperties, Mic, Download, Loader2, File, Code, FileText, CheckCircle2, QrCode } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { auth, signOut, onAuthStateChanged } from './firebase';
+import QRCode from 'qrcode';
 import './Dashboard.css';
 
 export default function Dashboard() {
@@ -21,12 +22,19 @@ export default function Dashboard() {
   const [zipDownloadUrl, setZipDownloadUrl] = useState('');
   const [sheetJsonData, setSheetJsonData] = useState(null);
   const [transcriptionText, setTranscriptionText] = useState('');
+  const [userName, setUserName] = useState('');
+  const [qrText, setQrText] = useState('');
+  const [qrImage, setQrImage] = useState('');
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (!user) {
         navigate('/login');
+        return;
       }
+
+      const displayName = user.displayName || user.email || 'User';
+      setUserName(displayName);
     });
 
     return unsubscribe;
@@ -38,6 +46,21 @@ export default function Dashboard() {
       navigate('/login');
     } catch (err) {
       console.error('Logout failed:', err);
+    }
+  };
+
+  const generateQrCode = async () => {
+    if (!qrText.trim()) {
+      alert('Please enter text, URL, or another value to convert into a QR code.');
+      return;
+    }
+
+    try {
+      const dataUrl = await QRCode.toDataURL(qrText);
+      setQrImage(dataUrl);
+    } catch (err) {
+      console.error('QR generation failed:', err);
+      alert('QR code generation failed.');
     }
   };
 
@@ -151,11 +174,14 @@ export default function Dashboard() {
   return (
     <div className="dashboard-wrapper">
       <header className="dashboard-header">
-        <div>
-          <h1>Office & Student Productivity Hub</h1>
-          <p>100% Client-Side In-Browser Media & Document Engines</p>
+        <div className="dashboard-header-content">
+          <div>
+            <h1>Office & Student Productivity Hub</h1>
+            <p>100% Client-Side In-Browser Media & Document Engines</p>
+            <p className="welcome-text">Welcome, {userName}</p>
+          </div>
+          <button onClick={handleLogout} className="execution-button bg-rose">Logout</button>
         </div>
-        <button onClick={handleLogout} className="execution-button bg-rose">Logout</button>
       </header>
 
       {/* DYNAMIC METRIC CSS GRID CONTAINER ELEMENT */}
@@ -234,6 +260,26 @@ export default function Dashboard() {
             <div className="inner-output-box">
               <span className="box-subheading"><FileText size={14} /> Extracted Plaintext Dialog:</span>
               <textarea value={transcriptionText} readOnly className="output-textbox-area" />
+            </div>
+          )}
+        </section>
+
+        {/* CARD 5: QR CODE GENERATOR */}
+        <section className="dashboard-card border-amber">
+          <h2 className="card-title"><QrCode className="icon-amber" /> QR Code Generator</h2>
+          <p className="card-desc">Turn text, image links, or website URLs into a scannable QR code instantly.</p>
+          <textarea
+            value={qrText}
+            onChange={(e) => setQrText(e.target.value)}
+            placeholder="Enter text, URL, or any content here"
+            className="qr-input"
+            rows={4}
+          />
+          <button onClick={generateQrCode} className="execution-button bg-amber">Generate QR Code</button>
+
+          {qrImage && (
+            <div className="inner-output-box qr-output-box">
+              <img src={qrImage} alt="Generated QR code" className="qr-image" />
             </div>
           )}
         </section>

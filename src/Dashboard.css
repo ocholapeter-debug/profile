@@ -26,8 +26,15 @@
 }
 
 .dashboard-header {
-  text-align: center;
   margin-bottom: 3rem;
+}
+
+.dashboard-header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .dashboard-header h1 {
@@ -43,6 +50,12 @@
 .dashboard-header p {
   color: var(--text-muted);
   font-size: 1.1rem;
+}
+
+.welcome-text {
+  margin-top: 0.5rem;
+  font-weight: 600;
+  color: var(--text-main);
 }
 
 /* --- DYNAMIC GRID LAYOUT --- */
@@ -150,6 +163,8 @@
 .bg-emerald { background-color: var(--emerald); }
 .bg-emerald:hover { background-color: var(--emerald-dark); }
 .bg-emerald-dark { background-color: var(--emerald-dark); }
+.bg-amber { background-color: var(--amber); }
+.bg-amber:hover { background-color: #d97706; }
 
 /* --- OUTPUT BOXES & FEEDBACK ENGINE --- */
 .inner-output-box {
@@ -224,6 +239,34 @@
   margin: 0;
 }
 
+/* --- QR CODE STYLES --- */
+.qr-input {
+  width: 100%;
+  min-height: 100px;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  resize: vertical;
+}
+
+.qr-output-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.25rem;
+}
+
+.qr-image {
+  width: 220px;
+  height: 220px;
+  object-fit: contain;
+  border-radius: 0.5rem;
+  background-color: #ffffff;
+  padding: 0.75rem;
+}
+
 /* --- STATE SYSTEM INDICATORS --- */
 .status-indicator {
   display: flex;
@@ -275,4 +318,5 @@
   .dashboard-wrapper { padding: 1rem; }
   .dashboard-header h1 { font-size: 2rem; }
   .dashboard-grid { grid-template-columns: 1fr; }
+  .dashboard-header-content { flex-direction: column; align-items: flex-start; }
 }
