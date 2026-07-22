@@ -212,6 +212,12 @@
   overflow-y: auto;
 }
 
+.btn-logout{
+    color:rgb(17, 32, 146)(31, 28, 186);
+    background:red;
+    border-radius: 25px;
+}
+
 .file-preview-list li {
   display: flex;
   align-items: center;

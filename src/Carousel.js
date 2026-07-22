@@ -8,14 +8,14 @@ const Carousel = ({ slides, autoPlayInterval = 5000 }) => {
       image: './images/groupwork.jpg',
       caption: {
         title: 'Team Work',
-        description: 'Connects and carrys the top companies worldwide'
+        description: 'Connects and Carrys the top companies worldwide'
       }
     },
     {
-      image: 'https://images.unsplash.com/photo-1659080926109-2bfa668330c0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGludGVybnNoaXAlMjBpbWFnZXN8ZW58MHx8MHx8fDA%3D',
+      image:'./images/repair.jpeg',
       caption: {
-        title: 'Tech Networking',
-        description: 'Build your professional circle'
+        title: 'Computer Repair and Maintenance',
+       description: 'Professional diagnostics, hardware repairs, and software troubleshooting to keep your devices running at peak performance.'
       }
     },
     {

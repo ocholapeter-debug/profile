@@ -43,7 +43,7 @@ export default function Dashboard() {
   const handleLogout = async () => {
     try {
       await signOut(auth);
-      navigate('/login');
+      navigate('/');
     } catch (err) {
       console.error('Logout failed:', err);
     }
@@ -176,11 +176,11 @@ export default function Dashboard() {
       <header className="dashboard-header">
         <div className="dashboard-header-content">
           <div>
-            <h1>Office & Student Productivity Hub</h1>
-            <p>100% Client-Side In-Browser Media & Document Engines</p>
+            <h1>CholTech Other Services</h1>
+            <p>100% Media & Document Engines</p>
             <p className="welcome-text">Welcome, {userName}</p>
           </div>
-          <button onClick={handleLogout} className="execution-button bg-rose">Logout</button>
+          <button className='btn-logout' onClick={handleLogout} >Logout</button>
         </div>
       </header>
 

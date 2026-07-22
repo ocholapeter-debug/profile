@@ -27,11 +27,11 @@ function Services() {
     },
     {
       id: 4,
-      title: 'Cisco Certifications',
-      icon: '🏅',
-      description: 'Official CCNA, CCNP, and CCIE exam preparation. Lab-based training with certified instructors.',
-      features: ['CCNA', 'CCNP Security', 'Hands-on labs']
-    }
+      title: 'Graphic Design',
+      icon: '🎨',
+      description: 'Master visual communication, branding, and modern design tools. Project-based training with industry professionals.',
+      features: ['UI/UX Design', 'Branding & Typography', 'Adobe Creative Cloud']
+}
   ];
 
   return (
@@ -41,6 +41,7 @@ function Services() {
                 <span className='services-badge'>What we Offer</span>
                 <h2 className='services-title'>Our Premium Services</h2>
                 <p className='services-subtitle'>Empowering  Your Future with industry-leading training and support</p>
+                 <span><a  className='services-badge'  href='/login'>Other Service</a></span>
            </div>
        </div> 
 
@@ -56,7 +57,7 @@ function Services() {
                   <li key={idx}>{feature}</li>
                 )   )    }
               </ul>
-              <button className="service-btn">Learn More →</button>
+              
             </div>
           )  )   }
 

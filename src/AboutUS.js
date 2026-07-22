@@ -13,7 +13,7 @@ function AboutUS() {
   const stats = [
     { number: '2+', label: 'Years of Excellence' },
     { number: '6+', label: 'Students Trained' },
-    { number: '4+', label: 'Certified Instructors' },
+    { number: '1+', label: 'Certified Instructors' },
     { number: '80%', label: 'Success Rate' }
   ];
 
@@ -37,8 +37,8 @@ function AboutUS() {
                       Cisco certifications.
                     </p>
                   <p>
-                    My mission is simple: to a with the skills they need to thrive in a digital-first economy. 
-                      Whether you're starting from scratch or advancing your career, StratCom provides the roadmap to success.
+                    My mission is simple:to skill individuals to thrive in a digital-first economy. 
+                      Whether you're starting from scratch or advancing your career, CholTech provides the roadmap to success.
                   </p>
                   <div className='mission-vision'>
                     <div className='mission'>
@@ -47,7 +47,7 @@ function AboutUS() {
                     </div>
                     <div className='vision'>
                       <h4>My Vision</h4>
-                      <p>To be Africas Leading Tech Institution recognized for excellence and Innovation</p>
+                      <p>To be Africa's Leading Tech Institution recognized for excellence and Innovation</p>
                     </div>
                   </div>
                   </div>
