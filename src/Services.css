@@ -120,3 +120,42 @@
 .service-btn:hover {
     background-color: rgba(255, 255, 255, 0.16);
 }
+
+@media (max-width: 1024px) {
+  .services-section,
+  .services-container {
+    padding: 3rem 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .services-section,
+  .services-container {
+    padding: 2rem 1rem;
+  }
+
+  .services-header {
+    text-align: center;
+  }
+
+  .services-title {
+    font-size: 2rem;
+  }
+
+  .services-subtitle {
+    font-size: 1rem;
+  }
+
+  .services-grid {
+    gap: 1rem;
+  }
+
+  .service-card {
+    padding: 1.5rem;
+  }
+
+  .service-btn {
+    width: 100%;
+    font-size: 0.95rem;
+  }
+}

@@ -212,10 +212,18 @@
   overflow-y: auto;
 }
 
-.btn-logout{
-    color:rgb(17, 32, 146)(31, 28, 186);
-    background:red;
-    border-radius: 25px;
+.btn-logout {
+  color: #ffffff;
+  background: #dc2626;
+  border: none;
+  padding: 0.85rem 1.25rem;
+  border-radius: 999px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-logout:hover {
+  background: #b91c1c;
 }
 
 .file-preview-list li {

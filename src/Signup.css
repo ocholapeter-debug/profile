@@ -171,3 +171,67 @@ label2{
     opacity: 0.6;
     cursor: not-allowed;
 }
+
+@media (max-width: 640px) {
+  .signup-page {
+    padding: 1rem 0.75rem;
+  }
+
+  .signup-card {
+    padding: 1.75rem 1.5rem;
+  }
+
+  .signup-header > h2 {
+    font-size: 1.6rem;
+    margin: 0.5rem 0;
+  }
+
+  .signup-header > p {
+    font-size: 1rem;
+  }
+
+  .signup-form-group > label,
+  .signup-form-group > input,
+  .signup-buttom,
+  .google-btn,
+  .signup-switch {
+    width: 100%;
+  }
+
+  .signup-buttom,
+  .google-btn {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .signup-page {
+    padding: 1rem 0.75rem;
+  }
+
+  .signup-card {
+    padding: 1.75rem 1.5rem;
+  }
+
+  .signup-header > h2 {
+    font-size: 1.6rem;
+    margin: 0.5rem 0;
+  }
+
+  .signup-header > p {
+    font-size: 1rem;
+  }
+
+  .signup-form-group > label,
+  .signup-form-group > input,
+  .signup-buttom,
+  .google-btn,
+  .signup-switch {
+    width: 100%;
+  }
+
+  .signup-buttom,
+  .google-btn {
+    font-size: 1rem;
+  }
+}

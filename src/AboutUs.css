@@ -174,3 +174,56 @@
   letter-spacing: 0.04em;
 }
 
+@media (max-width: 1024px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .mission-vision {
+    display: grid;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .about-section,
+  .about-container {
+    padding: 3rem 1rem;
+  }
+
+  .about-image > img {
+    width: 100%;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .values-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .about-header,
+  .stats-grid,
+  .values-grid {
+    text-align: center;
+  }
+
+  .stats-grid,
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .abouttext > h3 {
+    font-size: 1.75rem;
+  }
+
+  .about-title,
+  .values-title {
+    font-size: 2.2rem;
+  }
+}
+

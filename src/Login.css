@@ -173,3 +173,35 @@ label2{
     opacity: 0.6;
     cursor: not-allowed;
 }
+
+@media (max-width: 640px) {
+  .login-page {
+    padding: 1rem 0.75rem;
+  }
+
+  .login-card {
+    padding: 1.75rem 1.5rem;
+  }
+
+  .login-header > h2 {
+    font-size: 1.6rem;
+    margin: 0.5rem 0;
+  }
+
+  .login-header > p {
+    font-size: 1rem;
+  }
+
+  .login-form-group > label,
+  .login-form-group > input,
+  .login-buttom,
+  .google-btn,
+  .login-switch {
+    width: 100%;
+  }
+
+  .login-buttom,
+  .google-btn {
+    font-size: 1rem;
+  }
+}
